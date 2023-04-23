@@ -11,88 +11,50 @@ table = dynamodb.table('rnb_songs_i_like')
 #Add 10 items into the table using the put_item method
 
 table.put_item(
-    Item={
-        'song': {
-        'S': 'Water Falls',
-        'year': 
-        'N': '1994',
-        'artist': 
-        'S': 'TLC',
-        'album': 
-        'S': 'Crazy Sexy Cool',
-        }
-    }
-    
-)
+    item = {'album':{'S':'Whats the 411?'},
+        'artist':{'S':'Mary J. Blige'},
+        'info':{'M':{'year':{'S':'1992'},
+                    'song':{'S':'Real Love'}}}}
+        
+    item = {'album':{'S':'Johnny Gill'},
+        'artist':{'S':'Johnny Gill'},
+        'info':{'M':{'year':{'S':'1990'},
+                    'song':{'S':'My My My'}}}}
 
-dynamodb.put_item(TableName='rnb_songs_I_like', Item=item)
+    item = {'album':{'S':'The Miseducation of Lauryn Hill'},
+        'artist':{'S':'Lauren Hill'},
+        'info':{'M':{'year':{'S':'1998'},
+                    'song':{'S':'Ex-Factor'}}}}
 
-table.put_item(
-    Item={'song_title': 'Waterfalls', 'artist': 'TLC'}
-    
-)
+    item = {'album':{'S':'Maxwells Urban Hang Suite'},
+        'artist':{'S':'Maxwell'},
+        'info':{'M':{'year':{'S':'1996'},
+                    'song':{'S':'Ascension'}}}}
 
-table.put_item(
-    Item={
-        'album' : "Revival"
-    
-    }
-)
+    item = {'album':{'S':'Secret'},
+        'artist':{'S':'Toni Braxton'},
+        'info':{'M':{'year':{'S':'1996'},
+                    'song':{'S':'Un-Break My Heart'}}}}
 
-table.put_item(
-    Item={
-       'album' : "Forever_My_Lady"
-    
-    }
-)
+    item = {'album':{'S':'Boyz II Men II'},
+        'artist':{'S':'Boyz II Men'},
+        'info':{'M':{'year':{'S':'1994'},
+                    'song':{'S':'I’ll Make Love to You'}}}}
 
-table.put_item(
-    Item={
-        'album' : "The_Miseducation_of_Lauryn_Hill"
-    
-    }
-)
+    item = {'album':{'S':'Born to Sing'},
+        'artist':{'S':'Envogue'},
+        'info':{'M':{'year':{'S':'1990'},
+                    'song':{'S':'Don’t Let Go'}}}}
 
-table.put_item(
-    Item={
-       'album' : "Maxwells_Urban_Hang_Suite"
-    
-    }
-)
+    item = {'album':{'S':'The Day'},
+        'artist':{'S':'Babyface'},
+        'info':{'M':{'year':{'S':'1996'},
+                    'song':{'S':'Every Time I Close My Eyes'}}}}
 
-table.put_item(
-    Item={
-       'album' : "Secret"
-    
-    }
-)
-
-table.put_item(
-    Item={
-       'album' : "II"
-    
-    }
-)
-
-table.put_item(
-    Item={
-        'album' : "Born_To_Sing"
-    
-    }
-)
-
-table.put_item(
-    Item={
-        'album' : "The_Day"
-    
-    }
-)
-
-table.put_item(
-    Item={
-        'album' : "One_In_a_Million"
-    
-    }
+    item = {'album':{'S':'One in a Million'},
+         'artist':{'S':'Aaliyah'},
+         'info':{'M':{'year':{'S':'1996'},
+                'song':{'S':'One in a Million'}}}}
 )
 
 print("Put Items succeded")
